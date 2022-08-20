@@ -15,4 +15,8 @@ Téléchargement et installation des dépendaces suivantes
 - profiler pack
 - orm pack
 
+Une fois le repos cloné, lancer dan le terminal la commande bash
+```bash
+php install.php
+```
 Suite à l'exécution du script, VSCode sera lancé automatiquement
