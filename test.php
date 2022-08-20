@@ -6,39 +6,32 @@
     echo'erreur lors du déplacement de dossier';
 }**/
 
-$test = 'cd /'. __DIR__ .'/skeleton';
+//$test = 'cd /'. __DIR__ .'/skeleton';
 $dir = __DIR__ ;
-$ex = explode("\\", $dir);
-
-
+var_dump($dir);
+$ex = explode(":", $dir);
 var_dump($ex);
 
-$r = str_replace(":","",$ex[0]);
-var_dump($r);
+$im = implode("", $ex);
+var_dump($im);
+$ex = explode("\\", $im);
+var_dump($ex);
+$im = implode("/", $ex);
+var_dump($im);
 
-$element = [];
+$re = str_replace("C", "c", $im);
 
-for ($c = 0; $c > 0; $c ++)
-{
-    $element[$ex];
-}
-
-var_dump('element = ' .$element);
-
-$url = $r + $element;
-
-$i = implode("/", $url);
-
-var_dump($i);
-
-$test = $i . '/skeleton';
-
-var_dump($test);
+var_dump($re);
 
 
-die;
+$skeleton = "skeleton";
+
+$cd = "cd " . $re . '/' . $skeleton .'/';
+
+var_dump($cd);
+
 //exec('composer require symfony/apache-pack');
-if(exec('cd /'. $test))
+if(exec("cd skeleton/"))
 {
     echo 'déplacement vers skeleton';
 } else {
