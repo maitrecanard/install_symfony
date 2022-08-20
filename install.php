@@ -9,6 +9,13 @@ class Symf
         $this->apachePack();
         $this->doctrineAnnotations();
         $this->twig();
+        $this->twigExtreBundle();
+        $this->twigStringExtra();
+        $this->assets();
+        $this->makerBundle();
+        $this->debugBundle();
+        $this->profilerPack();
+        $this->ormPack();
         $this->messageEnd();
         exec('code .');
     }
@@ -87,6 +94,86 @@ class Symf
         
         '; 
         exec('composer require twig/twig');
+    }
+
+    public function twigExtreBundle()
+    {
+        echo'
+        
+        Installation de la dépendance twig extra-bundle
+        
+        '; 
+        exec('composer require twig/extra-bundle');
+    }
+
+    public function twigStringExtra()
+    {
+        echo'
+        
+        Installation de la dépendance twig string-extra
+        
+        '; 
+        exec('composer require twig/string-extra');
+    }
+
+    public function assets()
+    {
+        echo'
+        
+        Installation de la dépendance asset
+        
+        '; 
+        exec('composer require symfony/asset');
+    }
+
+    public function makerBundle()
+    {
+        echo'
+        
+        Installation de la dépendance maker bundle
+        
+        '; 
+        exec('composer require --dev symfony/maker-bundle');
+    }
+
+    public function sensio()
+    {
+        echo'
+        
+        Installation de la dépendance sensio
+        
+        '; 
+        exec('composer require sensio/framework-extra-bundle');
+    }
+
+    public function debugBundle()
+    {
+        echo'
+        
+        Installation de la dépendance debug bundle
+        
+        '; 
+        exec('composer require --dev symfony/debug-bundle');
+    }
+
+    public function profilerPack()
+    {
+        echo'
+        
+        Installation de la dépendance profiler pack
+        
+        ';
+        exec('composer require --dev symfony/profiler-pack');
+    }
+
+    public function ormPack()
+    {
+        echo'
+        
+        Installation de la dépendance orm pack
+        
+        ';
+        exec('composer require symfony/orm-pack');
     }
 }
 
