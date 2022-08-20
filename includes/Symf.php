@@ -44,6 +44,7 @@ class Symf
     public function installSymf()
     {
         exec('composer create-project symfony/skeleton');
+        exec('cd skeleton/');
     }
 
     public function apachePack()
