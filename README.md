@@ -1,4 +1,4 @@
-# Symfony skeleton 5.4 avec script d'installation de dépendance
+# Symfony skeleton 5.4 avec script d'installation de dépendances
 ## install.php
 Téléchargement et installation des dépendaces suivantes
 - composer
