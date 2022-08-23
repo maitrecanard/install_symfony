@@ -175,6 +175,16 @@ class Symf
         ';
         exec('composer require symfony/orm-pack');
     }
+    
+    public function fixtures()
+    {
+        echo'
+        
+        Installation de la dépendance fixtures
+        
+        ';
+         exec('composer require --dev doctrine/doctrine-fixtures-bundle');
+    }
 }
 
 $symf = new Symf;
