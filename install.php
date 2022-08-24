@@ -16,6 +16,10 @@ class Symf
         $this->debugBundle();
         $this->profilerPack();
         $this->ormPack();
+        $this->fixtures();
+        $this->form();
+        $this->csrf();
+        $this->validate();
         $this->messageEnd();
         exec('code .');
     }
