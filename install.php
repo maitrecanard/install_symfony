@@ -185,6 +185,26 @@ class Symf
         ';
          exec('composer require --dev doctrine/doctrine-fixtures-bundle');
     }
+    
+    public function form()
+    {
+        echo'
+        
+        Installation de la dépendance form
+        
+        ';
+         exec('composer require symfony/form');
+    }
+    
+    public function csrf()
+    {
+        echo'
+        
+        Installation de la dépendance csrf
+        
+        ';
+        exec('composer require symfony/security-csrf');
+    }
 }
 
 $symf = new Symf;
