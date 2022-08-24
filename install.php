@@ -205,6 +205,16 @@ class Symf
         ';
         exec('composer require symfony/security-csrf');
     }
+    
+    public function validate() 
+    {
+                echo'
+        
+        Installation de la dépendance validate
+        
+        ';
+        exec('composer require symfony/validator');
+    }
 }
 
 $symf = new Symf;
