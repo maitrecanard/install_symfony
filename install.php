@@ -20,6 +20,7 @@ class Symf
         $this->form();
         $this->csrf();
         $this->validate();
+        $this->translation();
         $this->messageEnd();
         exec('code .');
     }
@@ -218,6 +219,16 @@ class Symf
         
         ';
         exec('composer require symfony/validator');
+    }
+    
+    public function translation() 
+    {
+                echo'
+        
+        Installation de la dépendance translation
+        
+        ';
+        exec('composer require symfony/translation');
     }
 }
 
