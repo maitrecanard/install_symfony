@@ -21,6 +21,7 @@ class Symf
         $this->csrf();
         $this->validate();
         $this->translation();
+        $this->security();
         $this->messageEnd();
         exec('code .');
     }
@@ -229,6 +230,16 @@ class Symf
         
         ';
         exec('composer require symfony/translation');
+    }
+    
+    public function security()
+    {
+        echo'
+        
+        Installation de la dépendance security
+        
+        ';
+        exec('composer require symfony/security-bundle');
     }
 }
 
