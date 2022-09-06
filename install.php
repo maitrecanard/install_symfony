@@ -8,6 +8,7 @@ class Symf
         $this->installVendor();
         $this->apachePack();
         $this->doctrineAnnotations();
+        $this->annotations();
         $this->twig();
         $this->twigExtreBundle();
         $this->twigStringExtra();
@@ -91,6 +92,17 @@ class Symf
         
         ';
         exec('composer require doctrine/annotations');
+    }
+    
+    
+    public function annotations()
+    {
+        echo'
+        
+        Installation de la dépendance annotations
+        
+        ';
+        exec('composer require annotations');
     }
 
     public function twig()
