@@ -23,6 +23,7 @@ class Symf
         $this->translation();
         $this->security();
         $this->messageEnd();
+        $this->serialise();
         exec('code .');
     }
 
@@ -240,6 +241,16 @@ class Symf
         
         ';
         exec('composer require symfony/security-bundle');
+    }
+    
+        public function serialize()
+    {
+        echo'
+        
+        Installation de la dépendance serialize
+        
+        ';
+        exec('composer require symfony/serializer');
     }
 }
 
