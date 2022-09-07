@@ -26,6 +26,7 @@ class Symf
         $this->messageEnd();
         $this->serialise();
         $this->jwt();
+        $this->cors();
         exec('code .');
     }
 
@@ -274,6 +275,14 @@ class Symf
         
         ';
         exec('composer require lexik/jwt-authentication-bundle');
+    }
+    
+    public function cors()
+    {
+        echo'
+        Installation de la dépendance cors
+        ';
+        exec(' composer require nelmio/cors-bundle');
     }
 }
 
