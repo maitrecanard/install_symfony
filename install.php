@@ -25,6 +25,7 @@ class Symf
         $this->security();
         $this->messageEnd();
         $this->serialise();
+        $this->jwt();
         exec('code .');
     }
 
@@ -255,7 +256,7 @@ class Symf
         exec('composer require symfony/security-bundle');
     }
     
-        public function serialize()
+    public function serialize()
     {
         echo'
         
@@ -264,8 +265,18 @@ class Symf
         ';
         exec('composer require symfony/serializer');
     }
+    
+     public function jwt()
+    {
+        echo'
+        
+        Installation de la dépendance serialize
+        
+        ';
+        exec('composer require lexik/jwt-authentication-bundle');
+    }
 }
 
-$symf = new Symf;
+new Symf;
 
-$symf;
+
