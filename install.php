@@ -27,6 +27,7 @@ class Symf
         $this->serialise();
         $this->jwt();
         $this->cors();
+        $this->testPack();
         exec('code .');
     }
 
@@ -283,6 +284,14 @@ class Symf
         Installation de la dépendance cors
         ';
         exec(' composer require nelmio/cors-bundle');
+    }
+    
+    public function testPack()
+    {
+        echo'
+        Installation de la dépendance test-pack
+        ';
+        exec('composer require --dev symfony/test-pack');
     }
 }
 
